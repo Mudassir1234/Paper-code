@@ -102,3 +102,146 @@ Here following dataset types are described.
    - [random](https://pynative.com/python/random/)
    - [plot](https://plotly.com/)
 
+### Run script
+
+In order to replicate those tests, once the project directory has been downloaded, please open the terminal and move to the project folder within the terminal.
+
+Now you can type
+
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  cache                       Inspect and manage pip's wheel cache.
+  index                       Inspect information available from package indexes.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  debug                       Show information useful for debugging.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --debug                     Let unhandled exceptions propagate outside the
+                              main subroutine, instead of logging them to
+                              stderr.
+  --isolated                  Run pip in an isolated mode, ignoring
+                              environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --no-input                  Disable prompting for input.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host or host:port pair as trusted,
+                              even though it does not have valid or any HTTPS.
+  --cert <path>               Path to PEM-encoded CA certificate bundle. If
+                              provided, overrides the default. See 'SSL
+                              Certificate Verification' in pip documentation
+                              for more information.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate
+                              in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+  --no-color                  Suppress colored output.
+  --no-python-version-warning
+                              Silence deprecation warnings for upcoming
+                              unsupported Pythons.
+  --use-feature <feature>     Enable new functionality, that may be backward
+                              incompatible.
+  --use-deprecated <feature>  Enable deprecated functionality, that will be
+                              removed in the future.
+
+## REPAIR class description
+
+### Attributes
+
+- `Cost : float`
+
+  Cost is input parameter which is given during training of agent 
+
+ - `Time : float`
+
+  Time is input parameter which is given during training of agent 
+  
+- `damage: bool`
+  
+  Whether unit is reconstructed or not
+  
+ - `distance: integer`
+  
+  Distance among units/buildings
+  
+  - `poltical priority: integer`
+  
+  To consider politicians input which is ranked between 1 to 10.
+  
+  - `number of people: integer`
+  
+  People who directly got effected
+  
+  - `social benefits: float`
+  
+  Social benefits which people get after reconstruction of units
+
+
+### Methods
+
+class DQNAgent:
+    def __init__(self, state_size, action_size):
+
+        # Define size of state and action
+        self.state_size = state_size
+        self.action_size = action_size
+        self.action_space = action_size
+
+        # These are hyper parameters for the DQN
+        self.discount_factor = 0.95
+        self.learning_rate = 0.001        
+        self.epsilon_max = 1.0
+        self.epsilon_decay = 0.0003
+        self.epsilon_min = 0.00000001
+        self.alpha = 0.1
+        
+        self.batch_size = 32        
+        # create replay memory using deque
+        self.memory = deque(maxlen=2000)
+
+        # create main model and target model
+        self.model = self.build_model()
+
+        
+
+    # approximate Q function using Neural Network
+    def build_model(self):
+        model = Sequential()
+        model.add(Dense(8, input_dim = self.state_size,activation ='relu'))
+        model.add(Dense(32,activation ='relu'))
+        model.add(Dense(64,activation ='relu'))
+        model.add(Dense(self.action_size,activation ='linear'))
+        model.compile(loss='mse',optimizer=Adam_v2(lr=self.learning_rate))
+        model.summary
+        return model
+
