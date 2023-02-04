@@ -69,4 +69,36 @@ Here following dataset types are described.
 | Sulomna   | Sulmona Dataset               | Binary     | The goal is to find out damage buildings, roads and bridges                                                                                               | Number of People, cost, time, political periority, distance among buildings,  physical dependecies and social benefits                   |
 | L'Aquila  | Historical Cenetr L'Aquila Dataset     | Binary     | The goal is to find out damage buildings, roads and bridges in 2009 earthquack                                                                                               |  Number of People, cost, time, political periority, distance among buildings,  physical dependecies and social benefits                         |
                   
-  
+  ## Experiment replication
+
+### Environment setup
+
+1. **Conda users**
+
+   Create the conda environment using the following command:
+
+   ```shell
+   conda env create -f environment.yml
+   ```
+
+2. **Pip users**
+
+   Create the virtual environment using the following commands:
+
+   ```shell
+   virtualenv <env_name>
+   source <env_name>/bin/activate
+   pip install -r requirements.txt
+   ```
+
+3. **Manual setup**
+
+   If the previous ways to not work just install the following libraries manually:
+
+   - [pandas](https://pandas.pydata.org/)
+   - [numpy](https://numpy.org/)
+   - [netwrokx](https://networkx.org/)
+   - [matplotlib](https://matplotlib.org/)
+   - [random](https://pynative.com/python/random/)
+   - [plot](https://plotly.com/)
+
