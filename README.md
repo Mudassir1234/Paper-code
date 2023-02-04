@@ -18,7 +18,7 @@ Addtionally the presented approach is a core of a decision-support system and It
 
 ## Citation request
 
-Please cite our papers if you use our REPIR approach experiments which are alreayd published in 2021 IEEE COMPSAC Conference:
+Please cite our papers if you use our REPAIR approach experiments which are alreayd published in 2021 IEEE COMPSAC Conference:
 
 _Ghulam Mudassir and Antinisca Di Marco are the auhtors link: https://ieeexplore.ieee.org/abstract/document/9529371
 
