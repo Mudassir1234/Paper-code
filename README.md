@@ -8,7 +8,7 @@
 - [Datasets and methods](#datasets-and-methods)
 - [Experiment replication](#experiment-replication)
 - [Credits](#credits)
-- [License](#license)
+
 
 ## General info
 
@@ -244,4 +244,9 @@ class DQNAgent:
         model.compile(loss='mse',optimizer=Adam_v2(lr=self.learning_rate))
         model.summary
         return model
+  
+  ## Credits
+
+The original paper was written by Ghulam Mudassir, Antinisca di Marco and Giordano d'Aloisio.
+This work is partially supported by Territori Aperti a project funded by Fondo Territori Lavoro e Conoscenza CGIL CISL UIL, by SoBigData-PlusPlus which is founded by the University of L’Aquila. All the numerical simulations have been realized mostly on the Linux HPC cluster Caliban of the High-Performance Computing Laboratory of the Department of Information Engineering, Computer Science and Mathematics (DISIM) at the University of L’Aquila.
 
