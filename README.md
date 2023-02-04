@@ -45,4 +45,28 @@ _Ghulam Mudassir and Antinisca Di Marco are the auhtors link: https://ieeexplore
 3. When the scripts run every time Rewards.pkl file is generated to generate objetcs structures.
 
 4. The data folder contains all the datasets listed in section [Datasets and methods](#datasets-and-methods).
+
+## Datasets and methods
+
+We have verified REPAIR approach on very complex dataset of Sulmona and L'Aquil which was extracted from shapefiles. For details of data extraction process please  check the aforementioned paper for more information on the datasets and their preprocessing. In following section we have explained general phases of extraction and types of datasets.
+
+### Extraction pahses and datasets types 
+
+Here following we have described the data extraction phases
+
+1- Extracted data in shapefiles from google earth
+
+2- Coversion of shapefiles into complete and crossroad graph
+
+3- From extracted data generated undirected graph  
+
+4- Save extracted data in .csv files
+
+Here following dataset types are described.
+
+| Dataset | Full Name                   | Type       | Description                                                                                                                                                            | Parameters                      |
+| ------- | --------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| Sulomna   | Sulmona Dataset               | Binary     | The goal is to find out damage buildings, roads and bridges                                                                                               | Number of People, cost, time, political periority, distance among buildings,  physical dependecies and social benefits                   |
+| L'Aquila  | Historical Cenetr L'Aquila Dataset     | Binary     | The goal is to find out damage buildings, roads and bridges in 2009 earthquack                                                                                               |  Number of People, cost, time, political periority, distance among buildings,  physical dependecies and social benefits                         |
+                  
   
