@@ -106,11 +106,12 @@ Here following dataset types are described.
 
 In order to replicate those tests, once the project directory has been downloaded, please open the terminal and move to the project folder within the terminal.
 
-Now you can type
+Now you can use follwing commands for set the environemnt and run the project
 
-  pip <command> [options]
 
 Commands:
+
+```shell
   install                     Install packages.
   download                    Download packages.
   uninstall                   Uninstall packages.
@@ -173,7 +174,7 @@ General Options:
                               incompatible.
   --use-deprecated <feature>  Enable deprecated functionality, that will be
                               removed in the future.
-
+```
 ## REPAIR class description
 
 ### Attributes
